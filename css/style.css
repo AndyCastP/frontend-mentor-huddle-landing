@@ -94,6 +94,7 @@
     text-decoration: none;
     margin: 2em auto 2em;
     border-radius: 30px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
 }
 
 
@@ -101,7 +102,6 @@
 
 .icons__container{
     width: 100%;
-    
 }
 
 .icons__list{
@@ -181,7 +181,7 @@
 .main__figure{
     margin: 0;
     min-width: 200px;
-    max-width: 800px;
+    max-width: 1000px;
 }
 .main__img{
     width: 100%;
@@ -216,7 +216,15 @@
     padding: 10px 50px;
     align-self: start;
     font-size: .9rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
 }
+
+.main__link:hover{
+    
+    background-color: var(--softMagenta);
+    color: #fff;
+}
+
 
 /* Icons */
 
@@ -234,30 +242,24 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
+    gap: 1.5em;
 }
-
-.icons__item{
-    width: 30px;
-    height: 30px;
-    display: inherit;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.icons__link{
-    border-radius: 50%;
-    border: 1px solid #fff;
-}
-
-
 
 .icons__icon{
-    color: #fff;
     font-size: 1em;
-    padding: .7em;
 }
 
+
+.icons__item:hover{
+    
+    border: 1px solid var(--softMagenta);
+}
+
+.icons__icon:hover{
+    background-color: #fff;
+    border-radius: 50%;
+    color: var(--softMagenta);
+}
 
 }
 
