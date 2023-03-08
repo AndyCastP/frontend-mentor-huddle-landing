@@ -14,33 +14,44 @@
     box-sizing: border-box ;
 }
 
-body{
-    background-image: url('../images/bg-mobile.svg');
-    background-color: var(--violet);
-}
 
 
 /* Main */
 
 .main{
+    height: 100vh;
     width: 100%;
+    background-image: url('../images/bg-mobile.svg');
+    background-size: contain;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-color: var(--violet);
 }
 
 .main__container{
     width: 80%;
     margin: 0 auto;
+    
+}
+
+.main__hero{
+    width: 80%;
+    margin: 0 auto 4em;
 }
 
 .main__logo{
-    display: flex;
-    margin: 1em 0 2em;
-    width: 120px;
+    display: block;
+    max-width: 150px;
+    padding-top: 2em;
 }
 
 .main__figure{
     width: 100%;
     display: flex;
     margin: 0 auto;
+    max-width: 400px;
 }
 .main__img{
     width: 100%;
@@ -56,14 +67,17 @@ body{
 
 .main__title{
     font-family: var(--font-f-pop);
+    font-size: 1.7rem;
     font-weight: 600;
     text-align: center;
     color: #fff;
-    margin: 2em auto 1em;
+    margin: 2em auto .5em;
 }
 
 .main__paragraph{
     font-family: var(--font-f-ops);
+    font-size: 1rem;
+    line-height: 1.5;
     font-weight: 400;
     text-align: center;
     color: #fff;
@@ -72,9 +86,10 @@ body{
 
 .main__link{
     font-family: var(--font-f-pop);
+    font-size: .8rem;
     font-weight: 400;
     text-align: center;
-    padding: 10px 70px;
+    padding: 15px 75px;
     background-color: #fff;
     text-decoration: none;
     margin: 2em auto 2em;
@@ -82,23 +97,24 @@ body{
 }
 
 
-/* Footer */
+/* Icons */
 
-.footer__container{
+.icons__container{
     width: 100%;
     
 }
 
-.footer__list{
+.icons__list{
+    margin-top: 3em;
     list-style: none;
     padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1.5em;
+    gap: 1em;
 }
 
-.footer__item{
+.icons__item{
     width: 30px;
     height: 30px;
     display: inherit;
@@ -107,19 +123,20 @@ body{
     border-radius: 50%;
 }
 
-.footer__link{
+.icons__link{
     border-radius: 50%;
     border: 1px solid #fff;
 }
 
 
 
-.footer__icon{
+.icons__icon{
     color: #fff;
-    padding: .3em;
+    font-size: .8em;
+    padding: .6em;
 }
 
-.footer__attribution{
+/* .footer__attribution{
     margin-top: 2em; 
     font-size: 12px; 
     text-align: center;
@@ -130,4 +147,130 @@ body{
 .footer__attribution a{ 
     color: hsl(228, 45%, 44%); 
     color: #fff; 
+} */
+
+@media (min-width: 578px){
+    
+/* Main */
+.main{
+    background-image: url('../images/bg-desktop.svg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position-x: -100%;
+    background-color: var(--violet);
 }
+
+.main__hero{
+    display: block;
+    width: 90%;
+    margin: 0 auto 6em;
+}
+
+.main__logo{
+    max-width: 200px;
+}
+
+.main__container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 4em;
+}
+
+.main__figure{
+    margin: 0;
+    min-width: 200px;
+    max-width: 800px;
+}
+.main__img{
+    width: 100%;
+}
+
+.main__texts{
+    max-width: 500px;
+    display: inherit;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.main__title{
+    margin: 0;
+    margin-top: 2em;
+    margin-bottom: .5em;
+    font-size: 2rem;
+    text-align: start;
+    width: 80%;
+}
+
+.main__paragraph{
+    width: 93%;
+    font-size: .9rem;
+    text-align: start;
+    margin-bottom: 1.5em;
+
+}
+
+.main__link{
+    margin: 0;
+    padding: 10px 50px;
+    align-self: start;
+    font-size: .9rem;
+}
+
+/* Icons */
+
+.icons__container{
+    width: 100%;
+    height: 100%;
+    display: inherit;
+    justify-content: end;
+    align-items: end;
+}
+
+.icons__list{
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.icons__item{
+    width: 30px;
+    height: 30px;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.icons__link{
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+
+
+.icons__icon{
+    color: #fff;
+    font-size: 1em;
+    padding: .7em;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
